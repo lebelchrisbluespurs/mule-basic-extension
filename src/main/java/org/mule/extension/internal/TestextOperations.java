@@ -34,6 +34,7 @@ public class TestextOperations {
   private String buildHelloMessage(String person) {
 	//here is a comment
 	//here is another comment
+	//another comment
     return "Hello master " + person + "!!!";
   }
 }
