@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:testext="http://www.mulesoft.org/schema/mule/testext"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/testext http://www.mulesoft.org/schema/mule/testext/current/mule-testext.xsd">
+
+    <testext:config name="config" configId="configId">
+        <testext:connection requiredParameter="aValue" />
+    </testext:config>
+
+    <flow name="sayHiFlow">
+        <testext:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <testext:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
